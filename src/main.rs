@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 extern crate rand;
 use rand::Rng;
 use std::io;
@@ -30,7 +28,6 @@ fn get_input() -> i8 {
 
 fn main() {
     // get first move from user
-    let mut input = String::new();
     println!("Please enter your first move.");
 
     // x
