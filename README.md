@@ -1,4 +1,4 @@
-# mineswepper
+# minesweeper
 
 ```
 > cargo run
