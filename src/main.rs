@@ -32,7 +32,6 @@ fn main() {
     input.clear();
 
     // y
-
     print!("Y: ");
     io::stdout().flush().expect("Failed to flush stdout");
 
