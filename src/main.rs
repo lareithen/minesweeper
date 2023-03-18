@@ -9,7 +9,9 @@ const HEIGHT: i8 = 10;
 const MINE_COUNT: i8 = 10;
 const MINE: i8 = -1;
 
-fn get_input() -> i8 {
+fn get_input(axis: &str) -> i8 {
+    print!("{}", axis);
+
     io::stdout().flush().expect("Failed to flush stdout");
 
     let mut input = String::new();
@@ -30,13 +32,8 @@ fn main() {
     // get first move from user
     println!("Please enter your first move.");
 
-    // x
-    print!("X: ");
-    let fm_x: i8 = get_input();
-
-    // y
-    print!("Y: ");
-    let fm_y: i8 = get_input();
+    let fm_x: i8 = get_input("X: ");
+    let fm_y: i8 = get_input("Y: ");
 
     // create table
     let mut table: Vec<Vec<i8>> = Vec::new();
