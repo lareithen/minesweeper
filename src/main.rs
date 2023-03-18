@@ -11,6 +11,23 @@ const HEIGHT: i8 = 10;
 const MINE_COUNT: i8 = 10;
 const MINE: i8 = -1;
 
+fn get_input() -> i8 {
+    io::stdout().flush().expect("Failed to flush stdout");
+
+    let mut input = String::new();
+
+    io::stdin()
+        .read_line(&mut input)
+        .unwrap();
+    
+    let fm: i8 = input
+        .trim()
+        .parse()
+        .expect("Invalid input.");
+
+    fm
+}
+
 fn main() {
     // get first move from user
     let mut input = String::new();
@@ -18,33 +35,11 @@ fn main() {
 
     // x
     print!("X: ");
-    io::stdout().flush().expect("Failed to flush stdout");
-
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read line.");
-    
-    let fm_x: i8 = input
-        .trim()
-        .parse()
-        .expect("Invalid input.");
-    
-    input.clear();
+    let fm_x: i8 = get_input();
 
     // y
     print!("Y: ");
-    io::stdout().flush().expect("Failed to flush stdout");
-
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read line.");
-    
-    let fm_y: i8 = input
-        .trim()
-        .parse()
-        .expect("Invalid input.");
-
-    input.clear();
+    let fm_y: i8 = get_input();
 
     // create table
     let mut table: Vec<Vec<i8>> = Vec::new();
