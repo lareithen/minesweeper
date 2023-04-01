@@ -95,4 +95,4 @@ fn main() {
 // end of the code and mine too :neutral_face:
 
 // rust is good but its gay
-// ~ an unsigned 8-bit integer 
+// ~ an unsigned 32-bit integer 
